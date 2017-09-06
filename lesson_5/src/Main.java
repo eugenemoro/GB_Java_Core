@@ -11,7 +11,7 @@ public class Main {
 		method1(arr);
 		System.out.println("2-ой способ:");
 		method2(arr);
-	}
+}
 
 	public static void method1(float[] arr){
 		long a = System.currentTimeMillis();
@@ -41,6 +41,15 @@ public class Main {
 				method1(a2);
 			}
 		});
+		t1.start();
+		t2.start();
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		System.arraycopy(a1, 0, arr, 0, h);
 		System.arraycopy(a2, 0, arr, h, h);
 		System.out.println(System.currentTimeMillis() - a);
