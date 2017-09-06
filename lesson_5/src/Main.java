@@ -26,7 +26,6 @@ public class Main {
 		float[] a2 = new float[h];
 		long a = System.currentTimeMillis();
 		System.arraycopy(arr, 0, a1, 0, h);
-		System.out.println(System.currentTimeMillis() - a);
 		System.arraycopy(arr, h, a2, 0, h);
 		System.out.println(System.currentTimeMillis() - a);
 		Thread t1 = new Thread(new Runnable() {
