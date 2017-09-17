@@ -11,6 +11,7 @@ public class Main {
 		method1(arr);
 		System.out.println("2-ой способ:");
 		method2(arr);
+
 }
 
 	public static void method1(float[] arr){
